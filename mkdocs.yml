@@ -19,5 +19,7 @@ extra:
       link: 'https://twitter.com/macronjs'
 
 markdown_extensions:
-  - codehilite
   - admonition
+  - codehilite
+  - pymdownx.superfences
+  - pymdownx.emoji

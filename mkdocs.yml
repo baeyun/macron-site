@@ -1,0 +1,23 @@
+site_name: API Documentation
+
+# Copyright
+copyright: 'Copyright &copy; 2018 Macron'
+
+theme:
+  name: 'material'
+  logo:
+    icon: 'book'
+  palette:
+    primary: 'deep purple'
+    accent: 'deep purple'
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/bukharim96/macron'
+    - type: 'twitter'
+      link: 'https://twitter.com/macronjs'
+
+markdown_extensions:
+  - codehilite
+  - admonition

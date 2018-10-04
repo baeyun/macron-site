@@ -1,6 +1,6 @@
 # Getting Started
 
-Macron is a light framework for building cross-platform desktop applications with JavaScript, HTML and CSS. It does so by creating a single thread where all static content runs alongside native modules tailored for rapid development. To learn more about Macron, check the <a href="/">homepage</a> or <a href="/">the tutorial</a>.
+Macron is a light framework for building cross-platform desktop applications with JavaScript, HTML and CSS using the system's native web engine. It does so by creating a single thread where all static content runs alongside native modules tailored for rapid development. To learn more about Macron, check the <a href="/">homepage</a> or <a href="/">the tutorial</a>.
 
 As far as you need to get up and running, you will only need a single configuration file to make things happen. This section will get you covered with all the basic commands to start, serve and build a full Macron application in a few simple steps.
 
@@ -175,4 +175,15 @@ console.log(
     2. Native modules can be established as standalone plugins.
     3. Find out more on native modules in the <a href='/api'>API Reference</a> section.
 
-## Advanced prototyping
+## Building your app for deployment
+
+If you went along with this mini-tutorial from the start, you are on a great spot. The next step is to build your app into something
+quite interactable that can be used by your users.
+
+To build your app, run:
+
+`macron build`
+
+in your project directory. To run the build, use:
+
+`macron start build`

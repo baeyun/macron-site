@@ -1,3 +1,8 @@
+<!--
+  Copyright (c) 2018 The Macron Project
+
+  All rights reserved.
+-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,61 +19,37 @@
   <div id="wrapper">
     <div class="container" id="release-version">
       <p class="center-align">
-        Howdy! Macron <b>v0.2.0 (beta)</b> is already out! Check out the <a href="javascript:void(0)">releases</a>.
+        Howdy! Macron <b>v0.2.0 (beta)</b> is already out! Check out the <a href="/site/releases/index.html">releases</a>.
       </p>
     </div>
 
     <header id="header">
       <nav>
         <div class="nav-wrapper container">
-          <a href="#" class="brand-logo">Macron</a>
+          <a href="/" class="brand-logo">Macron</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="javascript:void(0)">Docs</a></li>
-            <li><a href="javascript:void(0)">Apps</a></li>
-            <li><a href="javascript:void(0)">Blog</a></li>
-            <li><a href="javascript:void(0)">Releases</a></li>
+            <li><a href="/site/getting-started/index.html">Docs</a></li>
+            <!-- <li><a href="javascript:void(0)">Apps</a></li> -->
+            <li><a href="https://medium.com/macron">Blog</a></li>
+            <li><a href="/site/releases/index.html">Releases</a></li>
+            <li><a href="mailto:bukharim96@gmail.com">Contact</a></li>
             <li style="position: relative;top: -20px;margin-left: 10px;">
               <a class="github-button" href="https://github.com/bukharim96/macron" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star bukharim96/macron on GitHub">Star</a>
             </li>
           </ul>
         </div>
       </nav>
-      
-      <div id="nav-content" class="center-align">
-        <!-- Sticky (gooey) effect using CSS SVG Filters by Alex Marinenko -->
-        <!-- https://codepen.io/jo-asakura/pen/NPaJwb -->
-        <div class="bubbles-wrapper bubbles-circle">
-          <div class="bubble">
-            <img src="./icons/power-cord.svg" alt="">
-          </div>
-          <div class="bubble">
-            <img src="./icons/rocket.svg" alt="">
-          </div>
-          <div class="bubble">
-            <img src="./icons/feather.svg" alt="">
-          </div>
-          <div class="bubble">
-            <img src="./icons/windows8.svg" alt="">
-          </div>
-          <div class="bubble">
-            <img src="./icons/linux.svg" alt="">
-          </div>
-          <div class="bubble">
-            <img src="./icons/apple.svg" alt="">
-          </div>
-        </div>
+      <div id="logo-center">
+        <img src="/home/bukharim96/Pictures/macron-logo.png" alt="Macron logo">
       </div>
+      <section id="intro" class="container">
+        <p class="center-align">
+          Macron is a framework for building cutting-edge cross-platform desktop apps using plain HTML, CSS and JavaScript! <a href="/site/getting-started/index.html">Learn more</a>.
+        </p>
+      </section>
     </header>
-
-    <section id="intro" class="container">
-      <p class="center-align">
-        Macron is a framework that builds cutting-edge cross-platform desktop apps using plain HTML, CSS and JavaScript! <a href="http://localhost:8000/">Learn more</a>.
-      </p>
-    </section>
-
     <section id="features" class="section container">
       <h1 class="center-align">Features</h1>
-
       <div class="row">
         <div class="col s12 l4 center-align feature">
           <div class="feature-img-container">
@@ -81,20 +62,20 @@
         </div>
         <div class="col s12 l4 center-align feature">
           <div class="feature-img-container">
-            <img src="./icons/feather.svg" alt="">
-          </div>
-          <h4 class="center-align">Light & Simple</h4>
-          <p>
-            Macron creates build that are super light and getting started is just as easy as running a few commands. Sit back and watch the speeds!
-          </p>
-        </div>
-        <div class="col s12 l4 center-align feature">
-          <div class="feature-img-container">
             <img src="./icons/power-cord.svg" alt="">
           </div>
           <h4 class="center-align">Native Extensions</h4>
           <p>
             For extra performance, you could always take your apps to the next level with compiled C/C++ or Python.
+          </p>
+        </div>
+        <div class="col s12 l4 center-align feature">
+          <div class="feature-img-container">
+            <img src="./icons/feather.svg" alt="">
+          </div>
+          <h4 class="center-align">Light & Simple</h4>
+          <p>
+            Macron creates build that are super light and getting started is just as easy as running a few commands. Sit back and watch the speeds!
           </p>
         </div>
       </div>
@@ -106,7 +87,7 @@
           </div>
           <h4 class="center-align">Cross-platform</h4>
           <p>
-            Write once, deploy to any platform. Macron currently supports Windows only. Check out our <a href="javascript:void(0)">support list</a>.
+            Write once, deploy to any platform. Macron currently supports Windows only. Check out our <a href="/site/releases/index.html">support list</a>.
           </p>
         </div>
         <div class="col s12 l4 center-align feature">
@@ -121,11 +102,11 @@
         </div>
         <div class="col s12 l4 center-align feature">
             <div class="feature-img-container">
-              <img src="./icons/earth.svg" alt="">
+              <img src="./icons/linux.svg" alt="">
             </div>
-            <h4 class="center-align">Plugins</h4>
+            <h4 class="center-align">Native Installers and Menus</h4>
             <p>
-              If your app isn't satisfied, try out Macron plugins. They're an ideal way to save your time.
+              Macron uses <b>truly</b> native menus and installers to give your apps a desktop feeling.
             </p>
           </div>
       </div>
@@ -134,20 +115,60 @@
 
     <section class="section center-align container">
       <h1>Getting Started!</h1>
-      <p class="center-align">Would you like to have some fun seeing your app running on Macron?</p>
-      <a id="load-install" class="waves-effect waves-light btn-large red">Try out Macron</a>
+      <p class="center-align">
+        Would you like to have some fun seeing your app running on Macron? Dead easy.
+        You are a few commands away.
+      </p>
+      <div class="row">
+        <div class="terminal col l6 s12">
+<pre class="code" class="left-align">
+<span class="comment"># Install Macron globally from npm</span>
+$ <span class="command">npm</span> <span class="script">install -g</span> macron
+
+<span class="comment"># Create new app</span>
+$ <span class="command">macron</span> <span class="script">init </span> MyCoolApp
+
+<span class="comment"># Integrate Macron in existing project</span>
+$ <span class="command">macron</span> <span class="script">init </span>
+
+<span class="comment"># Remotely run your app</span>
+$ <span class="command">macron</span> <span class="script">start</span>
+
+<span class="comment"># Build your awesome app</span>
+$ <span class="command">macron</span> <span class="script">build</span>
+
+<span class="comment"># Run your awesomely built app</span>
+$ <span class="command">macron</span> <span class="script">start build</span></pre>
+      </div>
+      <div class="terminal col l6 s12">
+<pre class="code">
+<span class="comment"># Requirements (Windows)</span>
+- WPF (.NET) version: >=3.5/4.0
+- Node version: >=8.11.3
+- Python version: >=3.6
+- pip version: >= 9.0.1
+- pythonnet version: >=2.3.0
+- pyinstaller version: >=3.4
+- pygubu
+- winshell
+</pre>
+        </div>
+      </div>
+      <p class="center-align">
+        Check our <a href="/site/releases/index.html">Release Notes</a> section for more additional features.
+      </p>
+      <a href="/site/getting-started/index.html" id="load-install" class="waves-effect waves-light btn-large red">Try out Macron</a>
       <div class="divider"></div>
     </section>
 
     <section class="section center-align container">
       <h1>Support Us</h1>
       <p class="">
-        Macron is a community-based project and <a href="http://localhost:8000/contributing">any form of support</a> would definitely contribute big time to the development, maintenance and usage of this serivice. Become a patreon now to backup Macron's future!
+        Macron is a community-based project and <a href="/site/contributing/index.html">any form of support</a> would definitely contribute big time to the development, maintenance and usage of this service. Become a patreon now to backup Macron's future!
       </p>
-      <a id="load-patreon" class="waves-effect waves-light btn-large red">
-        <img src="./icons/patreon.svg" alt="Patreon Logo White"> Become a Patreon
+      <a href="https://patreon.com/user?u=13990115" id="load-patreon" class="waves-effect waves-light btn-large red">
+        <img src="./icons/patreon.svg" alt="Patreon Logo White"> Become a Patron
       </a>
-      <!-- <div class="divider"></div> -->
     </section>
   </div>
 
@@ -157,19 +178,17 @@
         <div class="col l6 s12">
           <h5 class="white-text">Quick Guide</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">API Documentation</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Getting Started</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Advanced Guide</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Reference</a></li>
+            <li><a class="grey-text text-lighten-3" href="/site/getting-started/index.html">Getting Started</a></li>
+            <li><a class="grey-text text-lighten-3" href="/site/api/index.html">API Reference</a></li>
+            <li><a class="grey-text text-lighten-3" href="/site/advanced/index.html">Advanced Guide</a></li>
           </ul>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Advanced</h5>
           <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Stories of Macron</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Under The Hood</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Repository</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Prebuilts & Plugins</a></li>
+            <li><a class="grey-text text-lighten-3" href="/site/under-the-hood/index.html">Under The Hood</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://medium.com/macron">Stories of Macron</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://github.com/bukharim96/macron">Official Repository</a></li>
           </ul>
         </div>
       </div>
@@ -177,13 +196,13 @@
     <div class="footer-copyright">
       <div class="container">
         Copyright © Macron 2018
-        <a class="grey-text text-lighten-4 right" href="#!">
+        <a class="grey-text text-lighten-4 right" href="https://github.com/bukharim96/macron">
           <img src="./icons/github.svg" alt="">
         </a>
-        <a class="grey-text text-lighten-4 right" href="#!">
+        <a class="grey-text text-lighten-4 right" href="https://twitter.com/macronjs">
           <img src="./icons/twitter.svg" alt="">
         </a>
-        <a class="grey-text text-lighten-4 right" href="#!">
+        <a class="grey-text text-lighten-4 right" href="https://medium.com/macron">
             <img src="./icons/medium.svg" alt="">
           </a>
       </div>

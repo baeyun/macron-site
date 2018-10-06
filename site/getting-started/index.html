@@ -1,0 +1,886 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Official documentation of the Macron framework">
+      
+      
+        <link rel="canonical" href="https://macron.netlify.com/getting-started/">
+      
+      
+        <meta name="author" content="Macron">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
+    
+    
+      
+        <title>Getting Started - Macron API Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.451f80e5.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.1aa3b519.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="../#getting-started" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://macron.netlify.com/" title="Macron API Documentation" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">book</i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                Macron API Documentation
+              </span>
+              <span class="md-header-nav__topic">
+                Getting Started
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/bukharim96/macron/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      bukharim96/macron
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://macron.netlify.com/" title="Macron API Documentation" class="md-nav__button md-logo">
+      
+        <i class="md-icon">book</i>
+      
+    </a>
+    Macron API Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/bukharim96/macron/" title="Go to repository" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      bukharim96/macron
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/" title="Advanced" class="md-nav__link">
+      Advanced
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="API Reference" class="md-nav__link">
+      API Reference
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../build/" title="Building & Deploying" class="md-nav__link">
+      Building & Deploying
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../contributing/" title="Contributing Guide" class="md-nav__link">
+      Contributing Guide
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Getting Started
+      </label>
+    
+    <a href="./" title="Getting Started" class="md-nav__link md-nav__link--active">
+      Getting Started
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" title="Project layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macron-configuration-endpoint" title="Macron configuration endpoint" class="md-nav__link">
+    Macron configuration endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-options" title="Configuration options" class="md-nav__link">
+    Configuration options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taking-your-app-to-the-next-level-with-native-modules" title="Taking your app to the next level with native modules" class="md-nav__link">
+    Taking your app to the next level with native modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-core-modules" title="Accessing core modules" class="md-nav__link">
+    Accessing core modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-app-for-deployment" title="Building your app for deployment" class="md-nav__link">
+    Building your app for deployment
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../releases/" title="Release Notes" class="md-nav__link">
+      Release Notes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../troubleshooting/" title="Troubleshooting" class="md-nav__link">
+      Troubleshooting
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../under-the-hood/" title="Under The Hood" class="md-nav__link">
+      Under The Hood
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-layout" title="Project layout" class="md-nav__link">
+    Project layout
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#macron-configuration-endpoint" title="Macron configuration endpoint" class="md-nav__link">
+    Macron configuration endpoint
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-options" title="Configuration options" class="md-nav__link">
+    Configuration options
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taking-your-app-to-the-next-level-with-native-modules" title="Taking your app to the next level with native modules" class="md-nav__link">
+    Taking your app to the next level with native modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-core-modules" title="Accessing core modules" class="md-nav__link">
+    Accessing core modules
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" title="Example" class="md-nav__link">
+    Example
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-your-app-for-deployment" title="Building your app for deployment" class="md-nav__link">
+    Building your app for deployment
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/bukharim96/macron/edit/master/docs/getting-started.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<p>Macron is a light framework for building cross-platform desktop applications with JavaScript, HTML and CSS using the system's native web engine. It does so by creating a single thread where all static content runs alongside native modules tailored for rapid development. To learn more about Macron, check the <a href="/">homepage</a> or the <a href="/">Under The Hood</a>.</p>
+<p>As far as you need to get up and running, you will only need a single configuration file to make things happen. This section will get you covered with all the basic commands to start, serve and build a full Macron application in a few simple steps.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>To get up and running with Macron, your machine will need to meet some requirements. Macron uses different approaches for creating applications on different platforms. For this reason, you need to install the independent software dependencies for your particular machine.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Windows</th>
+<th>MacOS</th>
+<th>Linux</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NodeJS &gt;=8.11.3</td>
+<td>Yes</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Python &gt;=3.31</td>
+<td>Yes</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Pip &gt;=9.0.1</td>
+<td>Yes</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>winshell</td>
+<td>Yes</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>WPF</td>
+<td>Yes</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>pythonnet</td>
+<td>Yes</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>pyinstaller &gt;=3.4</td>
+<td>Yes</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>pygubu</td>
+<td>Yes</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We currently support Windows only. A MacOS and Linux version is expected to come soon.
+Previous versions of Node are not battle-tested so the table above is susceptible to changes.</p>
+</div>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>No extra requirements are needed for this process since all the requirements are expected to be covered. With NodeJS installed, run:</p>
+<div class="codehilite"><pre><span></span>npm install -g macron
+</pre></div>
+
+<p>The following commands show how to get started quickly.</p>
+<ul>
+<li><code>macron init [app-name]</code> - Create a new Macron project. Run this command without <code>app-name</code> to initialize Macron in the current directory.</li>
+<li><code>macron start</code> - Starts the application. Creates windows in a new thread.</li>
+<li><code>macron build</code> - Builds a stable application. <a href="">Learn more</a>.</li>
+<li><code>macron deploy</code> - Creates final build of your app and setup wizard. <a href="">Learn more</a>.</li>
+<li><code>macron --help</code> - Run this command to revisit commands and receive further help with your application.</li>
+</ul>
+<h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
+<p>When you run the <code>macron init</code> command, you will get a few files. The most important of these is the <code>macron.config.js</code> configuration file which we will cover in a moment. Traditionally, the general project layout is defined in the following order even though it is not opinionated at all:</p>
+<div class="codehilite"><pre><span></span>public/
+    icons/
+        icon.ico                  # Windows only (for now)
+    index.html                    # The entry point to the application
+src/                              # All application logic and backend
+macron.config.js                  # The configuration file
+</pre></div>
+
+
+<h2 id="macron-configuration-endpoint">Macron configuration endpoint<a class="headerlink" href="#macron-configuration-endpoint" title="Permanent link">&para;</a></h2>
+<p>The <code>macron.config.js</code> is a single entry point for handling general application settings. It contains several options for managing how the main window start ups (maximized, fixed width, etc.) and how the build is created.</p>
+<p>After a successful initialization, the configurations are passed on to the native end where the main window of your app is created. Check the <a href='under-the-hood'>Under The Hood</a> section for a detailed explanation of the process.</p>
+<div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Window</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;macron&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Window</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;MyFirstMacronWindow&#39;</span><span class="p">,</span>
+  <span class="nx">width</span><span class="o">:</span> <span class="mi">1200</span><span class="p">,</span>
+  <span class="nx">height</span><span class="o">:</span> <span class="mi">960</span><span class="p">,</span>
+  <span class="nx">minHeight</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
+  <span class="nx">minWidth</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
+  <span class="nx">maxHeight</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
+  <span class="nx">maxWidth</span><span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
+  <span class="nx">frameless</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">startupFromCenter</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="c1">// startupState: &#39;maximized&#39;,</span>
+  <span class="nx">devServerURI</span><span class="o">:</span> <span class="s1">&#39;http://localhost:3000/&#39;</span><span class="p">,</span>
+  <span class="nx">menu</span><span class="o">:</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./src/menubar&#39;</span><span class="p">)</span>
+<span class="p">});</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;MyCoolApp&#39;</span><span class="p">,</span>
+  <span class="nx">mainWindow</span><span class="o">:</span> <span class="nx">App</span><span class="p">,</span>
+  <span class="nx">build</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">debugMode</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<h2 id="configuration-options">Configuration options<a class="headerlink" href="#configuration-options" title="Permanent link">&para;</a></h2>
+<p>The <code>Window</code> object entails and generates a ready-made API endpoint that is used by the native end to create a platform-specific window. This is the root of your application and can be built at any given moment into a stable application with a setup wizard that could be distributed.</p>
+<p>The following options are available for any configuration and only apply to the main window:</p>
+<ul>
+<li><strong>title</strong> <code>string</code> - Required. The statusbar title.</li>
+<li><strong>width</strong> <code>number</code> - The window width.</li>
+<li><strong>height</strong> <code>number</code> - The window height.</li>
+<li><strong>minHeight</strong> <code>number</code> - The minimum window height.</li>
+<li><strong>minWidth</strong> <code>number</code> - The minimum window width.</li>
+<li><strong>maxHeight</strong> <code>number</code> - The maximum window height.</li>
+<li><strong>maxWidth</strong> <code>number</code> - The maximum window width.</li>
+<li><strong>frameless</strong> <code>boolean</code> - Removes outer frame from window if <code>true</code>. Default is <code>false</code>.</li>
+<li><strong>startupFromCenter</strong> <code>boolean</code> - Determines whether window should appear in the center if <code>true</code>. If set to <code>false</code>, the platform decides where to draw the window. Default is <code>true</code>.</li>
+<li><strong>startupState</strong> <code>string</code> - Default <code>'normal'</code>. Could be either:<ul>
+<li><code>'maximized'</code> - Window starts in a maximized state.</li>
+<li><code>'minimized'</code> - Window starts in a minimized state.</li>
+<li><code>'normal'</code> - Window starts in a state described by the platform.</li>
+</ul>
+</li>
+<li><strong>devServerURI</strong> <code>string</code> - Specifies a local or online URL source to start the app. Overrides <code>sourcePath</code> if defined.</li>
+<li><strong>menu</strong> <code>MacronMenubar</code> - A pointer to the app's menubar.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ol>
+<li>All the options are inserted into the global window context as <code>macron.CurrentWindow</code> and can all be accessed as dynamic setters and getters which means a script could mutate any of these properties.</li>
+<li>Setting a single <code>minWidth</code> and <code>maxWidth</code> alongside a single <code>minHeight</code> and <code>maxHeight</code> will result in a window that cannot be resized.</li>
+<li>Building your app adds some extra options to the <code>macron.config.js</code> for the build process and is covered in the <a href='/build'>Build &amp; Deploy</a> section.</li>
+</ol>
+</div>
+<h2 id="taking-your-app-to-the-next-level-with-native-modules">Taking your app to the next level with native modules<a class="headerlink" href="#taking-your-app-to-the-next-level-with-native-modules" title="Permanent link">&para;</a></h2>
+<p>Macron uses the Python runtime to access native functionalities of the platform. These functionalities are then curated into a common form that can be recognized by Macron's <code>NativeBridge</code> class. The modules then get bundled with an app and can get accessed at runtime.</p>
+<h3 id="accessing-core-modules">Accessing core modules<a class="headerlink" href="#accessing-core-modules" title="Permanent link">&para;</a></h3>
+<p>Since desktop apps are expected to have a lot of behaviour, Macron makes use of Python's core modules to generate a set of APIs that can be accessed at runtime. Some of those APIs include <code>FileSystem</code>, <code>Process</code> and more. Check out the <a href='/api'>API Reference</a> section for more on core modules.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<p>The example below demonstrates the process of using the <code>FileSystem</code> API to set and get the contents of a '<em>pupp.txt</em>' file.</p>
+<div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">FileSystem</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;macron&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">originalContents</span> <span class="o">=</span> <span class="s1">&#39;I 💕 🐶&#39;</span><span class="p">;</span>
+
+<span class="nx">FileSystem</span><span class="p">.</span><span class="nx">writeFile</span><span class="p">(</span><span class="s1">&#39;./pupps.txt&#39;</span><span class="p">,</span> <span class="nx">originalContents</span><span class="p">);</span>
+
+<span class="nx">alert</span><span class="p">(</span><span class="nx">FileSystem</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;./pupps.txt&#39;</span><span class="p">)</span> <span class="o">===</span> <span class="nx">originalContents</span><span class="p">)</span> <span class="c1">// pass</span>
+</pre></div>
+
+<!-- ### Creating custom native modules
+
+HTML5 web apps using JavaScript often find performance to be a matter of concern. As a matter of fact, a Macron app with native modules is way more performant than one without. Macron caters for performance-critical apps by giving the developer all the power to target a user's hardware capabilities.
+
+Advantages include:
+
+* Accessing the WebCam,
+* Accessing the shell/kernel,
+* Changing the desktop's layout and style,
+* Creating complex hashes and cryptos,
+* Creating and managing TCP servers,
+* Viewing torrents,
+* And a myriad more...
+
+#### Example
+
+This example shows how to get the working directory of your app:
+
+wzxhzdk:3
+
+wzxhzdk:4
+
+!!! tip
+    1. For extra performance measure, low-level languages could be used to create assemblies that could be accessed. For a C/C++ combination with you app, all you need is to run `make` on your module and use
+    Python to '*macronize*' it as illustrated in the demo above. Go to the <a href='/how-tos'>How Tos</a> section to get information on support for other languages.
+    2. Native modules can be established as standalone plugins.
+    3. Find out more on native modules in the <a href='/api'>API Reference</a> section. -->
+
+<h2 id="building-your-app-for-deployment">Building your app for deployment<a class="headerlink" href="#building-your-app-for-deployment" title="Permanent link">&para;</a></h2>
+<p>If you went along with this mini-tutorial from the start, you are on the right track. The next step is to build your awesome app into something quite interactable that can be used by your users.</p>
+<p>To build your app, run:</p>
+<div class="codehilite"><pre><span></span>macron build
+</pre></div>
+
+<p>... in your project directory. Once your app is built, run:</p>
+<div class="codehilite"><pre><span></span>macron start build
+</pre></div>
+
+<p>... to execute your build.</p>
+<p>For more on building and deploying your app, check the <a href="">Building &amp; Deploying</a> section.</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../contributing/" title="Contributing Guide" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Contributing Guide
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../releases/" title="Release Notes" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Release Notes
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2018 Macron
+          </div>
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/bukharim96/macron" class="md-footer-social__link fa fa-github"></a>
+    
+      <a href="https://twitter.com/macronjs" class="md-footer-social__link fa fa-twitter"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.583bbe55.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -486,7 +486,7 @@ None
 
 ### Methods
 
-!!! note
+!!! warning
     All `FileSystem` methods are synchronous. You could create an asynchronous wrapper over the `FileSystem` class to gain non-blocking I/O.
 
 #### readFile
@@ -563,7 +563,7 @@ Returns `boolean`.
 
 Gets the absolute path of the specified path (usually a relative path).
 
-`isFile(path: string)`
+`realpath(path: string)`
 
 Returns `string` or `null`.
 
@@ -598,6 +598,9 @@ Removes directory if it is empty.
 `rmdirEmpty(path: string)`
 
 Returns `void`.
+
+!!! note
+    `unlink`, `rmdir` and `rmdirEmpty` remove items permanently (with no cache). Do not use any if you need to do a temporary file-removal action.
 
 #### readDir
 

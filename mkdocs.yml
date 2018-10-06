@@ -1,11 +1,18 @@
-site_name: Macron API Documentation
+site_name: 'Macron API Documentation'
+site_description: 'Official documentation of the Macron framework'
+site_author: 'Macron'
+site_url: 'https://macron.netlify.com/'
 
-# Copyright
+# Repository
+repo_name: 'bukharim96/macron'
+repo_url: 'https://github.com/bukharim96/macron'
+
 copyright: 'Copyright &copy; 2018 Macron'
 
 theme:
   name: 'material'
-  font: false
+  feature:
+    tabs: true
   logo:
     icon: 'book'
   palette:
@@ -24,3 +31,5 @@ markdown_extensions:
   - codehilite
   - pymdownx.superfences
   - pymdownx.emoji
+  - toc:
+      permalink: true

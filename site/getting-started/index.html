@@ -584,7 +584,7 @@
                 
                 
                 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>Macron is a light framework for building cross-platform desktop applications with JavaScript, HTML and CSS using the system's native web engine. It does so by creating a single thread where all static content runs alongside native modules tailored for rapid development. To learn more about Macron, check the <a href="/">homepage</a> or the <a href="/">Under The Hood</a>.</p>
+<p>Macron is a light framework for building cross-platform desktop applications with JavaScript, HTML and CSS using the system's native web engine. It does so by creating a single thread where all static content runs alongside native modules tailored for rapid development. To learn more about Macron, check the <a href="/site/under-the-hood/index.html">Under The Hood</a>.</p>
 <p>As far as you need to get up and running, you will only need a single configuration file to make things happen. This section will get you covered with all the basic commands to start, serve and build a full Macron application in a few simple steps.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <p>To get up and running with Macron, your machine will need to meet some requirements. Macron uses different approaches for creating applications on different platforms. For this reason, you need to install the independent software dependencies for your particular machine.</p>
@@ -655,15 +655,15 @@ Previous versions of Node are not battle-tested so the table above is susceptibl
 </div>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>No extra requirements are needed for this process since all the requirements are expected to be covered. With NodeJS installed, run:</p>
-<div class="codehilite"><pre><span></span>npm install -g macron
+<div class="codehilite"><pre><span></span>npm install -g macron && npm link macron
 </pre></div>
 
 <p>The following commands show how to get started quickly.</p>
 <ul>
 <li><code>macron init [app-name]</code> - Create a new Macron project. Run this command without <code>app-name</code> to initialize Macron in the current directory.</li>
 <li><code>macron start</code> - Starts the application. Creates windows in a new thread.</li>
-<li><code>macron build</code> - Builds a stable application. <a href="">Learn more</a>.</li>
-<li><code>macron deploy</code> - Creates final build of your app and setup wizard. <a href="">Learn more</a>.</li>
+<li><code>macron build</code> - Builds a stable application. <a href="/site/build/index.html">Learn more</a>.</li>
+<li><code>macron deploy</code> - Creates final build of your app and setup wizard. <a href="/site/build/index.html">Learn more</a>.</li>
 <li><code>macron --help</code> - Run this command to revisit commands and receive further help with your application.</li>
 </ul>
 <h2 id="project-layout">Project layout<a class="headerlink" href="#project-layout" title="Permanent link">&para;</a></h2>
@@ -679,7 +679,7 @@ macron.config.js                  # The configuration file
 
 <h2 id="macron-configuration-endpoint">Macron configuration endpoint<a class="headerlink" href="#macron-configuration-endpoint" title="Permanent link">&para;</a></h2>
 <p>The <code>macron.config.js</code> is a single entry point for handling general application settings. It contains several options for managing how the main window start ups (maximized, fixed width, etc.) and how the build is created.</p>
-<p>After a successful initialization, the configurations are passed on to the native end where the main window of your app is created. Check the <a href='under-the-hood'>Under The Hood</a> section for a detailed explanation of the process.</p>
+<p>After a successful initialization, the configurations are passed on to the native end where the main window of your app is created. Check the <a href='/site/under-the-hood/index.html'>Under The Hood</a> section for a detailed explanation of the process.</p>
 <div class="codehilite"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Window</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;macron&#39;</span><span class="p">);</span>
 
 <span class="kr">const</span> <span class="nx">App</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Window</span><span class="p">({</span>
@@ -789,7 +789,7 @@ This example shows how to get the working directory of your app:
 </pre></div>
 
 <p>... to execute your build.</p>
-<p>For more on building and deploying your app, check the <a href="">Building &amp; Deploying</a> section.</p>
+<p>For more on building and deploying your app, check the <a href="/site/build/index.html">Building &amp; Deploying</a> section.</p>
                 
                   
                 
